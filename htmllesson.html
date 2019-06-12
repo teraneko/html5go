@@ -1,0 +1,747 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<html>
+	<head>
+	 <mate charset="utf-8">
+	<title>はじめてのHTML5</title>
+	<style>
+		p　li{color:gray;}
+		h3{color:navy;}
+		h4{color:teal;}
+		*{margin:0;padding:0,list-style:none;text-decoration:none;}
+		header,nav,section, div{border:1px solid gray;margin:10px;}
+		div p,p{text-indent: 1em;}
+		h5 p{text-indent: 2em;}
+		header{margin-bottm:0;}
+		aside li{float:left;}
+		nav:after,footer{content:"";display:block;clear:both;}
+		aside{float:left;margin-right:0;}
+		main{float:right;}
+		header,footer,li{text-aling:center;}
+		
+	</style>
+	</head>
+
+	<body>
+	<header>
+	<h1>はじめてのHTML5</h1>
+			<h2>HTML5検定試験に向けて勉強中</h2>
+
+	</header>
+
+	<nav>
+			<a href="#head">ドキュメントメタデータ/</a>
+			<a href="#body">セクション/</a>
+			<a href="#p">グルーピングコンテンツ/</a>
+			<a href="#a">テキストレベルセマンティック/</a>
+			<a href="#ins">エディット/</a>
+			<a href="#picture">埋め込みコンテンツ/</a>
+			<a href="#form">フォーム/</a>
+			<a href="#detalist">インタラクティブの要素/</a>
+			<a href="#script">スクリプティング/</a>
+			<a href="#css">CSS/</a>
+
+</nav>
+
+	<main>
+	<section>
+		<h2>DTD宣言</h2>
+			<pre><code>&lt;DOCTYPE html&gt;</code></pre>
+	</section>
+	<section>
+			<h2>ドキュメントメタデータ</h2>
+			<h3 id="head">head</h3>
+					<p>HTML文書の概要の集まり→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/head">head要素</a></p>
+				
+		<h3>title</h3>
+			<p> HTML文書のタイトル→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/title">title要素</a></p>
+			
+		<h3>base</h3>
+			<p>リンクの基準となるURLの指定→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/base">base要素</a></p>
+			<div><h4>属性	</h4>
+				href:基準となるURL<br>
+				target:表示ウィンドウ</div>
+		
+
+		<h3>link</h3>
+			<p>リンク→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/link">link要素</a></p>
+			<div><h4>属性（+属性値）	</h4>
+				<p>href:タイトルバーのアイコンURL
+				:外部ファイルのリンク先
+				:読み込むcssファイル</p>
+				<p>media:閲覧環境ごとにcssファイルを読み込むときの対象</p>
+				<p>rel：外部ファイルとの関係</p>
+				<p>rel="shortcut icon":タイトルバーのアイコン</p>
+				<p>rel="stylesheet":閲覧環境ごとに読み込むCSSファイル指定:<wbr>別ファイルのスタイル</p>
+				<p>size:タイトルバーのアイコン幅と高さ</p>
+				<p>type:タイトルバーアイコンのMIDEタイプ
+				:読み込むCSSファイルのMIDEタイプ</p>
+			</div>
+		
+
+		<h3>meta</h3>
+			<p>メタデータ情報を提示→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/meta">meta要素</a></p>
+			<div><h4>属性（+属性値）	</h4>
+				<p>charset:文字エンコード</p>
+				<p>content:webページの説明、キーワード
+				       :検索エンジン巡回ロボットの制御
+				       :スマートフォンの表示設定</p>
+				<p>name:webページの説明、キーワード</p>
+				<p>name="robots":検索エンジン巡回ロボットの制御</p>
+				<p>name="viewport":スマートフォンの表示設定</p></div>
+
+			
+
+		<h3>style</h3>
+			<p>headerスタイルを記述→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/style">style要素</a></p>
+			<div><h4>属性（+属性値）</h4>
+				<p>type:スタイルシートのMIDEタイプを指定</p>
+			</div>
+
+	</section>
+	<section>
+		<h2>セクション</h2>
+		<h3 id="body">body</h3>
+			<p>HTML文書の本体→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/body">body要素</a></p>
+
+		<h3>article</h3>
+			<p>記事のまとまり。フォーラムへの投稿、雑誌や新聞の記事、ブログなど。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/article">article要素</a></p>
+
+		<h3>section</h3>
+			<p>テーマのまとまり→<a href="https://developer.mozilla.org/ja/docs/HTML/Element/section">section要素</a></p>
+
+		<h3>nav</h3>
+			<p>主なリンクのまとまり。メニュー、目次、索引など。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/nav">nav要素</a></p>
+		
+		<h3>aside</h3>
+			<p>補足部分のまとまり。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/aside">aside要素</a></p>
+
+		<h3>hx</h3>
+			<p>&lt;h1&gt;～&lt;h6&gt は、セクションの見出しを6段階で表す。。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;～&lt;h6&gt 要素</a></p>
+
+		<h3>header</h3>
+			<p>イントロダクション、ナビゲーション等のグループ。見出し、ロゴ、セクションのヘッダー部分、検索フォームなど。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/header">header要素</a></p>
+
+		<h3>footer</h3>
+			<p>著作者に関する情報、関連ドキュメントへのリンク、著作権情報等。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/footer">footer要素</a></p>
+
+		<h3>アウトライン</h3>
+			<p >見出しやセクションが作る階層。</p>
+
+	</section>
+	<section>
+		<h2>グルーピングコンテンツ</h2>
+		<h3 id="p">p</h3>
+			<p>段落。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/p">p要素</a></p>
+
+		<h3>address</h3>
+			<p>連絡先情報。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/address">address要素</a></p>
+
+		<h3>hr</h3>
+			<p>段落間のテーマ 区切り線。視覚的な区切り線としてでなく意味的な用途として使用。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/hr">hr 要素</a></p>
+
+		<h3>pre</h3>
+			<p>改行やスペースの表示。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/pre">pre要素</a></p>
+			<p><pre>
+h5{color:red;}
+			</pre></p>
+
+		<h3>blockquote</h3>
+			<p>長い文書の引用。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">blockquote 要素</a></p>
+			<div><h4>属性	</h4>
+				<p>cite:引用元のURL</p></div>
+
+		<h3>ol</h3>
+			<p>順序付きリスト→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/ol">ol要素</a></p>
+			<P><ol>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+			</p>
+
+			<div><h4>属性</h4>
+				<p>reversed:項目が逆順に並ぶように指定。
+				<ol reversed>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+				</ol>
+				</p>
+
+				<p>start :項目の順序の開始値を指定。
+				<ol start="5">
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+				</ol>
+				</p>
+
+				<p>type:順番の形式を指示('a'、 'A'、'i'、'I'、'1'規定値)
+				<ol type="I">
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+				</ol>
+				</p></div>
+
+		<h3>ul</h3>
+			<p>記号がつくリスト。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/ul">ul要素</a></p>
+				<ul type="square">
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+						<li>箇条書き</li>
+				</ul>
+
+		<h3>li</h3>
+			<p>リストの項目。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/li">li 要素</a></p>
+			<div><h4>属性</h4>
+				<p>value:リスト項目の数値</p>
+			</div>
+
+		<h3>dl</h3>
+			<p>用語とその説明のリスト。用語集の作成やメタデータ (キーと値のペアのリスト) の表示など。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/dl">dl要素</a></p>
+
+		<h3>dt</h3>
+			<p>定義リスト中の用語。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/dt">dt要素</a></p>
+
+		<h3>dd</h3>
+			<p>定義リスト (&lt;dl&gt;) の用語の説明。</p>
+			<pre><code>&lt;dl&gt;
+	&lt;dt>HTML&lt;/dt&gt;&lt;dd&gt;ウェブのもっとも基本的な構成要素です。&lt;/dd&gt;
+	&lt;dt>CSS&lt;/dt&gt;&lt;dd&gt;ウェブページの表示や表現を記述するもの&lt;/dd&gt;
+	&lt;dt&gt;JavaScript&lt;/dt&gt;&lt;dd&gt;機能や振る舞いを記述するもの&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+		<h3>figure</h3>
+			<p>図表。	→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/figure">figure要素</a></p>
+
+		<h3>figcaption</h3>
+			<p>figure要素のキャプション。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/figcaption">figcaption要素</a></p>
+
+		<h3>main</h3>
+			<p>主な内容。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/main">main要素</a></p>
+
+		<h3>div</h3>
+			<p>汎用。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/div">div要素</a></p>
+
+	</section>
+
+	<section>
+		<h2>テキストセマンティック</h2>
+			<h3 id="a">a</h3>
+				<p>ハイパーリンク。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/a">a要素</a></p>
+				<div><h4>属性（＋属性値）</h4>
+					<p>accesskey:</p>
+					<p>href:ハイパーリンク先の URL :ダウンロードのリンク:ページ内の場所（id指定）。</p>
+					<p>href="mailto":メールアドレス</p>
+					<p>href="tel":電話番号</p>
+					<p>rel:外部ファイルとの関係</p>
+					
+					<p>title:リンク先のタイトルや説明。</p>
+					<p>target:リンク先表示。:リンク先のウィンドウ。</p>
+							<p><ul>
+									<li>_self: 現在と同じブラウザ(デフォルト)</li>
+								 <li>_blank: 新しいブラウザ。</li>
+									<li>_parent: 親ウィンドウ。</li>
+									<li>_top: 一番上のウィンドウ。</li>
+							</ul></p></div>
+
+			<h3>em</h3>
+				<p><em>強調</em>。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/em">em要素</a></p>
+
+			<h3>strong</h3>
+				<p><strong>重要</strong>→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/strong">strong要素</a></p>
+
+			<h3>small</h3>
+				<p>帰属の明示や、著作権表記。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/small">small要素</a></p>
+
+			<h3>s</h3>
+				<p>すでに正確でなくなったことを表す。<s>打消し線</s>スタイル。編集箇所を伝える場合には del と ins 。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/s">s要素</a></p>
+
+			<h3>cite</h3>
+				<p>作品のタイトル→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/cite">cite要素</a></p>
+
+			<h3>q</h3>
+				<p>短い文の引用。長文の引用には、blockquote。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">q要素</a></p>
+
+			<h3>dfn</h3>
+				<p>用語の定義。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/dfn">dfn要素</a></p>
+
+			<h3>abbr</h3>
+				<p> 略語。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/abbr">abbr要素</a></p>
+			<div>	<h4>属性</h4>
+						<p>title:略語の説明。マウスオーバー時に表示。</p>
+			<code><abbr title="エイチティーエムエル、HyperText Markup Language">HTML</abbr></code>
+			</div>
+
+			<h3>ruby</h3>
+				<p>ふりがな<ruby>要素<rp>(</rp><rt>youso</rt><rp>)</rp></ruby>→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/ruby">ruby要素</a></p>
+				<code>ふりがな&lt;ruby&gt;要素&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;youso&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+			<h3>rt</h3>
+				<p>文字の発音。ruby 要素で使用。</p>
+
+			<h3>rp</h3>
+				<p>ルビの表示をサポートしないブラウザ向けとして括弧を提供。</p>
+
+			<h3>date</h3>
+				<p>機械可読な形式で表示。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/data">data要素</a></p>
+				<div><h4>属性</h4>
+					<p>value:要素の内容を機械可読な形式で表示。
+</p></div>
+					
+			<h3>time</h3>
+				<p>日時。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/time">time要素</a></p>
+				<div><h4>属性</h4>
+					<p>datetime:日時。</p>
+					<code><p>検定試験は 
+						<time datetime="2018-03-18T13:00+09:00">3月 18 日</time>に始まります。</p></code>
+				</div>
+			<h3>code</h3>
+				<p>コードを表す。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/code">code要素</a></p>
+				<p><code>var i = 0;</code></P>
+
+			<h3>var</h3>
+				<p>変数。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/var">var要素</a></p>
+			
+				<code><p> 簡単な等式:
+  				<var>x</var> = <var>y</var> + 2 
+				</p></code>
+
+			<h3>samp</h3>
+				<p>プログラムなどからの出力。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/samp">samp要素</a></p>
+				<p>The diet-tracking app said: <samp>You're not eating your veggies</samp>
+
+			<h3>kbd</h3>
+				<p>ユーザーの入力。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/kbd">kbd要素</a></p>
+				<p><kbd><kbd>Ctrl</kbd>+<kbd>S</kbd></kbd> を押下して、
+  文書を保存してください。</p>
+
+			<h3>sub</h3> 
+				<p>下付き文字→<a href="https://developer.mozilla.org/ja/docs/HTML/Element/sub">sub要素</a></p>
+				<p>水の化学式は H<sub>2</sub>O です。</p>
+
+			<h3>sup</h3>
+				<p>上付き文字。→<a href="https://developer.mozilla.org/ja/docs/HTML/Element/sup">sup要素</a></p>
+				<p>円周率は直径n<sup>2</sup></p>
+
+			<h3>i</h3>
+				<p>技術用語、外国語のフレーズ、架空の人物の思考など。イタリック体で表示。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/i">i要素</a></p>
+				<p>月がきれいですね　(<i>I love you.</i>)</p>
+
+			<h3>b</h3>
+				<p>注意を引くテキスト。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/b">b要素</a></p>
+				<p> It explains their usage in an <b class="keywords">HTML</b> document.</p>
+
+			<h3>u</h3>
+				<p>アンダーライン (下線) 。「明確にレンダリングされているがはっきりと伝わらない部分」、「すべてが漢字で構成されスペースで単語を区切る慣習もない中国語においての、固有名詞であることの明示のための特別な表記」、「スペルミスとしての印付け」など。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/u">u要素</a></p>
+				<p><u>すべてAll</u>は
+  					<u>Dive into Python</u> の中で説明されています。</p>
+
+			<h3>mark</h3>
+				<p><mark>ハイライト</mark>→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/mark">mark要素</a></p>
+
+			<h3>span</h3>
+				<p>div 要素と非常に似た役割。div要素が ブロックレベル要素 の汎用コンテナーであるのに対し、span 要素は インラインレベル要素 のための<span style="background-color:Red">汎用コンテナーの役割</span>を果たす。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/span">span要素</a></p>
+
+			<h3>br</h3>
+				<p>改行、 <br>詩や散文、住所など、(段落として以外の) 文の分割が重要な文章を記述するのに便利。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/br">br要素</a></p>
+
+			<h3>wbr</h3>
+				<p>テキスト内でブラウザーが任意で改行を行ってよい位置を表す。。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/wbr">wbr要素</a></p>
+
+	</section>
+	<section>
+   <h2>エディト</h2>
+		<h3 id="ins">ins</h3>
+			<p>文書への追加。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/ins">ins要素</a></p>
+			<div><h4>属性</h4>
+				<p>cite:追加についての説明を記した URI 。</p>
+				<p>datetime:追加日時。</p>
+			</div>
+
+		<h3>del</h3>
+			<p>文書から削除。<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/del">del要素</a></p>
+			<div><h4>属性</h4>
+				<p>hidden:表示を隠す 。</p>
+				<p>translate:翻訳の可否。</p>
+			</div>
+
+
+  </section>
+	<section>
+		<h2>埋め込みコンテンツ</h2>
+			<h3 id="picture">picture</h3>
+
+			<p>imgに複数のソースを指定→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/picture">picture要素</a></p>
+
+			<h3>source</h3>
+			<p>複数のメディアリソースを指定。同一のメディアコンテンツを ブラウザごとに異なるメディア形式 で提供する場合に用います。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/source">source要素</a></p>
+			<div><h4>属性</h4>
+				<p>media: 複数のムービーを用意する対象。</p>
+				<p>scr:URL。</p>
+				<p>type:MIDEタイプ</p>
+			</div>
+
+			<h3>img</h3>
+			<p>画像を表示。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/Img">img要素</a></p>
+			<div><h4>属性</h4>
+				<p>alt:画像が表示されないときのテキスト 。</p>
+				<p>height:画像の高さ。</p>
+				<p>scr:画像のURL。</p>
+				<p>usemap:imgとmapの関連付け</p>
+				<p>width:画像の幅。</p>
+			<img src="02895.jpg" alt="スクリーン"　width=200" height="200"></img>
+			</div>
+			<h3>iframe</h3>
+			<p>現在のページに他のページを埋め込むことができます。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/iframe">iframe要素</a></p>
+			<div><h4>属性</h4>
+				<p>srcdoc:要素をページ内一部に挿入 。</p>
+				<p>height:インフレームの高さ。</p>
+				<p>scr:挿入するページのURL。</p>
+				<p>width:インフレームの幅。</p>
+			</div>
+
+			<h3>video</h3>
+			<p>文書に映像コンテンツを埋め込むため。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/video">video要</a></p>
+			<div><h4>属性</h4>
+					<p>autplay:ムービーの自動再生 。</p>
+					<p>controls:操作ボタン。</p>
+					<p>height:高さ。</p>
+					<p>loop:ループ再生。</p>
+					<p>muted:初期状態で消音</p>
+					<p>poster:代替え画像</p>
+					<p>src:ムービーのURL</p>
+					<p>width:幅</p>
+					<p><video src="mymovie.mp4"  autoplay loop muted width=200px >
+					</video>
+			</div>
+			<h3>audio</h3>
+			<p>ドキュメント内に音声コンテンツを埋め込む。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/audio">audio要素</a></p>
+			<div><h4>属性</h4>
+				<p>autplay:自動再生 。</p>
+				<p>controls:操作ボタン。</p>
+				<p>loop:ループ再生。</p>
+				<p>muted:初期状態で消音</p>
+				<p>preload:音楽ファイルの先読み方法</p>
+				<p>src:音楽のURL</p>
+			</div>
+
+
+			<h3>track</h3>
+			<p>字幕→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/track">track要素</a></p>
+				<div><h4>属性</h4>
+					<p>default:字幕の初期表示</p>
+					<p>kind:ムービーと字幕の関係。</p>
+					<p>label:ブラウザの表記文字。</p>
+					<p>src:字幕テキストのURL</p>
+					<p>srclang:字幕テキストの言語</p>
+				</div>
+
+	</section>
+
+	<section>
+		<h2></h2>
+			<h3 id="a">a</h3>
+			<p>リンク→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/a">a要素</a></p>
+				<div><h4>属性（＋属性値）</h4>
+					<p>accesskey:指定したページに移動するときのショートカット</p>
+					<p>href::リンク先</p>
+					<p>href="mailto":メールアドレスのリンク</p>
+					<p>href="tel":電話のリンク</p>
+					<p>rel:外部先リンク</p>
+					<p>target:リンク先の内容を表示する場所</p>
+					<p>title:リンク先のタイトルや説明</p>
+	</section>
+	<section>
+		<h2>フォーム</h2>
+			<h3 id="form">form</h3>
+				<p>フォーム→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/form">form要素</a></p>
+					<div><h4>属性</h4>
+					<p>method:フォームの入力データの送信方法</p>
+						<h5>
+							<p><pre>   get:送信先URLに入力データを付加してサーバに送信する</pre></p>
+					 		<p><pre>   post:送信先URLに入力データを付加しないでサーバに送信する</pre></p>
+						</h5>
+					<p>enctype:データを送信するときのMIDEタイプ</p>
+					<p>id:入力フォームのID</p>
+					<p>novalidate:入力チェック</p>
+					</div>
+
+			<h3>label</h3>
+				<p>フォーム部品の項目名。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/label">label要素</a></p>
+				<div><h4>属性</h4>
+					<p>for:フォーム部品と項目名の関連付け。</p>
+				</div>
+
+			<h3>input</h3>
+				<p>入力部品。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/input">input要素</a></p>
+					<div><h4>属性</h4>
+					<p>alt:送信ボタンんの代替え</p>
+					<p>autcomplete:入力項目の自動補完</p>
+					<p>autfocus:ページを開いた時のフォーカス</p>
+					<p>checed:チェックボックスの選択状態:ラジオボタンの選択状態</p>
+					<p>form:入力フォームを自由に配置</p>
+					<p>formaction:フォームデータの送信先上書き</p>
+					<p>height:送信ボタンの高さ</p>
+					<p>id:フォーム部品の項目名の関連づけ</p>
+					<p>list:datelistとinputの関連付け</p>
+					<p>max:入力値の最大</p>
+					<p>maxlength:1行の入力項目の最大値</p>
+					<p>min:数値入力の最小値</p>
+					<p>multiple:ファイルを選択する項目の複数選択</p>
+					<p>name:部品の名前::</p>
+					<p>pattern:入力する正規表現</p>
+					<p>placeholder:入力例</p>
+					<p>required:送信時の入力チェック</p>
+					<p>size:1行テキストの入力項目幅</p>
+					<p>spellcheck:自動スペルチェック</p>
+					<p>src:送信ボタンの画像URL</p>
+					<p>step:数値入力精度</p>
+					<p>title:入力形式を伝えるテキスト</p>
+					<p>value:デフォルトテキスト:サーバに送る値:スペルチェックのテキスト</p>
+					<p>width:画像の幅</p>
+					<p>type:入力項目の形式</p>
+					
+					<form><h5>
+						<p>text:1行テキストボックス</p>
+								<p><label>name：<input type="text" name="name"></label></p>
+						<p>tel:電話番号</p>
+								<p><label>tel：<input type="tel" name="tele"value="03xxxxxxxx"><label></p>
+						<p>search:検索キーワード</p>
+								<p><label>search：<input type="search"　name="search" value="たまいファーム"></label></p>
+						<p>url:URL入力</p>
+								<p><label>webサイト：<input type="url"　name="url" value="http://"></label></p>						
+						<p>email:メールアドレス</p>
+								<p><label>メールアドレス：<input type="email"　name="email" ></label></p>						
+						<p>number:数値入力</p>							
+								<p><label>人数：<input type="number"　name="number" value="" ></label></p>
+
+						<p>range:範囲内の値入力</p>
+								<p><label>選択してください：<input type="range"　name="volume" value="20" ></label></p>
+
+
+						<p>checkbox:チェックボックス</p>
+								<p><label>選択してください:<input type="checkbox" name="cat" value="cat" checked>ねこ
+										<input type="checkbox" naeckedme="rabbit" value="rabbit">うさぎ
+										<input type="checkbox" name="sheep" value="sheep">ひつじ	</lavel></p>
+
+						<p>radio:ラジオボタン</p>
+								<p><label>選択してください:<input type="radio" name="from5" value="Male">オス<
+								<input type="radio" name="from5" value="Female" checked>メス</lavel></p>
+
+						<p>file:ファイル選択</p>
+								<p><label>ファイル選択：<input type="file" name="file" value="file" multiple></label></p>
+
+						<p>hiden:非表示項目</p>
+							<p><input type="hidden" name="hidden" value="abcde"</p>
+								
+						<p>password:パスワード</p>
+								<p><label>パスワード：<input type="password" name="password"></label></p>
+						<p>reset:リセットボタン</p>
+								<p><input type="reset" name="reset" value="リセット"</p>
+						<p>submit:送信ボタン</p>
+								<p><input type="submit" value="送信"></p>
+						<p>image:画像を用いた送信ボタン</p>
+
+					</h5></form>
+				</div>
+
+			<h3>button</h3>
+				<p>ボタン→<a href="">button要素</a></p>
+				<div><h4>属性</h4>
+					<p>name:ボタン名</p>
+					<p>type:ボタン動作(submit,reset,button)</p>
+					<p>value:サーバーに送るデータ</p>
+				</div>
+
+			<h3>select</h3>
+				<p>ドロップダウンリスト→<a href="">select要素</a></p>
+				<div><h4>属性</h4>
+					<p>name:項目名</p>
+					<p>size:リスト内を一覧表示</p>
+					<select name="answer"　size="4">
+						<option value="" selected>選択してください</option>
+							<option value="1">ねこ</option>
+					 		<option value="2">うさぎ</option>
+					 		<option value="3">ひつじ</option>
+					</select>
+					</div>
+
+			<h3>datalist</h3>
+				<p>テキストボックスで入力候補を表示→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/datalist">datalist要素</a></p>
+				<div><h4>	属性</h4>
+					<p>id:datelistとinputの関連付け</p>
+						<label>お使いのブラウザを選択してください:
+						<input list="browsers" name="myBrowser" /></label>
+						<datalist id="browsers">
+						  <option value="Chrome">
+						  <option value="Firefox">
+						  <option value="Internet Explorer">
+						  <option value="Opera">
+						  <option value="Safari">
+						  <option value="Microsoft Edge">
+						</datalist>
+				</div>
+
+
+			<h3>optgroup</h3>
+				<p>ドロップダウンリスト内をグループ化→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/optgroup">optgroup要素</a></p>
+				<div><h4>属性</h4>
+					<p>labele:ドロップダウンリスト内をグループ化</p>
+				<p><select name="like">
+					<option value="" selected>選択してください</option>
+					<optgroup label="cat">ねこ</option>
+						<option value="Persian">ペルシャ</option>
+						<option value="Siamese">シャム</option>
+					</optgroup>
+					<optgroup label="rabit">うさぎ</option>
+						<option value="lop">ロップイヤー</option>
+						<option value="Dutch">ダッチ</option>
+					</optgroup>
+					</select></p>
+				</div>
+
+
+			<h3>option</h3>
+				<p>ドロップダウンリストの項目→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/option">option要素</a></p>
+					<div><h4>属性</h4>
+						<p>selected:ドロップダウンリストの項目選択</p>
+						<p>value:選択項目をサーバに送る</p>
+					</div>
+
+
+			<h3>textarea</h3>
+				<p>複数行のテキスト入力→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/textarea">textarea要素</a></p>
+				<div><h4>属性</h4>
+					<p>cols:1行に入る最大文字数</p>
+					<p>maxlenge:入力最大文字数</p>
+					<p>name:項目名</p>
+					<p>rows:表示行数</p>
+					<textarea cols="30" rows="5" name="answer"></textarea>
+				</div>
+					
+			<h3>output</h3>
+				<p>計算やユーザーによるアクションの結果→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/output">output要素</a></p>
+				<div><h4>属性</h4>
+					<p>name:要素名</p>
+<code>				&lt;form oninput="result.value=parseInt(b.value)"&gt;<br>
+				    &lt;input type="range" name="b" value="50" /&gt;<br>
+				    &lt;output name="result"&gt;50&lt;/output&gt;
+				&lt;/form&gt;
+</code>
+				<form oninput="result.value=parseInt(b.value)">
+				    <input type="range" name="b" value="50" /> 
+				    <output name="result">50</output>
+				</form></div>
+
+			<h3></h3>
+				<p>作業の進捗状況→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/progress">progress</a></p>
+				<div><h4>属性</h4>
+					<p>max:作業全体量</p>
+					<p>value:完成した作業</p>
+					<p><progress value="10" max="100">10%</progress></p>
+					</div>
+					
+				
+			<h3>meter</h3>
+				<p>ある範囲内での測定値をゲージで表示→<a href="https://developer.mozilla.org/ja/docs/HTML/Element/meter"></a>meter</p>
+				<div><h4>属性</h4>
+					<p>high:</p>
+					<p>low:</p>
+					<p>max:</p>
+					<p>min:</p>
+					<p>optimum:</p>
+					<p>value:</p>
+				<p><meter value="30" min="0" max="100">30%</meter></p>
+				</div>
+			<h3>fieldset</h3>
+				<p>複数のフォームのセット→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/fieldset">fieldset</a></p>
+		<p><fieldset>
+				<legend>たまいファーム</legend>
+				<label><input type="radio" name="a" value="1">ねこ</label>
+				<label><input type="radio" name="a" value="2">うさぎ</label>
+				<label><input type="radio" name="a" value="3">ひつじ</label>
+			</fieldset></p>
+
+			<h3>legend</h3>
+				<p>複数のフォームのセット内の見出し→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/legend">legend要素</a></p>
+
+	</section>
+	<section>
+		<h2>インタラクティブの要素</h2>
+				
+				<h3 id="detalist">detalist</h3>
+				<p>テキストボックス内で入力候補を表示→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/datalist">detalist要素</a></p>
+
+			<h3>summary</h3>
+				<p>details要素の内容の要約、キャプション、説明→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/summary">summary要素</a></p>
+	</section>
+
+	<section>
+		<h2>スクリプティング</h2>
+				<h3 id="script">script</h3>
+				<p>実行可能なスクリプトを埋め込み、または外部参照するコードを指定する際に用いる。→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/Script">script要素</a></p>
+				<code>&lt;script src="javascript.js"&gt;&lt;/script&gt;</code>
+
+			<h3>canvas</h3>
+				<p>Canvas スクリプティング API を使用して、グラフィックスやアニメーションを描画→<a href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/canvas">canvas要素</a></p>
+
+		<code>	&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;</code>
+
+	</section>
+<section>
+	<h2 id="css">CSS<h2>
+		<h3>全称セレクタ</h3>
+			<p>すべての種類の要素を選択→<a href="https://developer.mozilla.org/ja/docs/Web/CSS/Universal_selectors">全称セレクタ</a></p>
+			<code>* { スタイルプロパティ }</code>
+		<h3>要素セレクタ</h3>
+			<p>文書内で指定された方の要素を選択→<a href="https://developer.mozilla.org/ja/docs/Web/CSS/Type_selectors">要素セレクタ</a></p>
+			<p>要素名 { スタイルプロパティ }</p>
+			<pre><code>a { color: red;}
+
+
+</code></pre>
+
+		<h3>クラスセレクタ</h3>
+			<p>class 属性の内容に基づいて要素を選択→<a href="https://developer.mozilla.org/ja/docs/Web/CSS/Class_selectors">クラスセレクタ</a></p>
+<p>.クラス名 { スタイルプロパティ }</p>
+<pre><code>.spacious {
+  margin: 2em;
+}</code></pre>
+
+		<h3>idセレクタ</h3>
+			<p>id 属性の値に基づいて要素を選択→<a href="https://developer.mozilla.org/ja/docs/Web/CSS/ID_selectors">idセレクタ</a></p>
+<p>#ID値 { スタイルプロパティ }</p>
+<pre><code>#demo {
+  border: red 2px solid;
+}</code></pre>
+
+		<h3>style属性</h3>
+			<p>スタイルを書く場所は3か所。<br>
+1.link要素で外部ファイル（セレクタ指定）<br>
+2.head要素内に記述するstyle要素（セレクタ指定）<br>
+3.要素に記述するstyle属性（プロパティ：値；)
+
+		<h3>疑似クラス</h3>
+			<p>セレクターに付加するキーワードで、選択された要素対して特定の状態を指定します。例えば :hover 疑似クラスで、ユーザーがマウスポインタを当てたときにボタンの色を変更することができます→<a href="https://developer.mozilla.org/ja/docs/Web/CSS/Pseudo-classes">疑似クラス</a></p>
+
+		<h3>疑似要素</h3>
+			<p>セレクターに付加するキーワードであり、選択された要素対して特定の状態を指定→<a href="">疑似要素</a></p>
+
+
+		<h3>優先順位</h3>
+			<p>1.指定の順序による優先順位<br>
+         後ろに指定されたものが優先</p>
+			<p>2.セレクタ-の種類による優先順位<br>
+				IDセレクタ > classセレクタ = 疑似classセレクタ > 要素セレクタ = 疑似要素セレクタ > 全称セレクタ</p>
+			<p>3.スタイルシートの種類による優先順位<br>
+				制作者側 > ユーザー側 > ブラウザ側</p>
+<p>4.”!important”で指定したプロパティは最優先</p>
+
+</section>
+	</main>
+
+	<footer>(c)Teraneko1201</footer>
+
+	</body>
+</html>

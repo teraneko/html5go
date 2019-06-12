@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+	<html>
+		<head>
+			<mate charset="utf-8">
+			<title>canvas API</title>
+			<style>
+				h2,h3{text-indent:1em;}
+
+				h2{color:navy;}
+
+				h3{color:teal;}
+
+				p,pre {text-indent:-1em;
+					padding-left:3em;}
+
+		#mycanvas{border:1px solid gray;}
+		#mycanvas2{border:1px solid gray;}
+		#mycanvas3{border:1px solid gray;}
+
+
+			</style>
+		</head>
+		<body>
+		<header>
+			<h1>canvasAPI</h1>
+<pre><code>&lt;canvas id="mycanvas" width="300" height="300"&gt;&lt;/canvas&gt;
+
+var canvas=document.getElementById("mycanvas");
+var myctx=mycanvas.getContext("2d");
+</code></pre>
+		</header>
+		<main>
+<h2>Pie chart</h2>
+<h3>円グラフ/円弧</h3>
+<p>myctx1.arc(x,y,半径,開始角,終了角,方向);</p>
+	<p><canvas id="mycanvas" width="300" height="300"></canvas></p>
+
+<pre><code>
+//商品A
+var itemA=150;//←商品Aの割合
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,270*Math.PI/180,(itemA-90)*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="green";
+myctx.fill();
+</code></pre>
+
+<h2>Bar graph</h2>
+<h3>棒グラフ/矩形</h3>
+<p>myctx2.fillRect(x,y,幅,高さ);</p>
+
+	<p><canvas id="mycanvas2" width="300" height="300"></canvas></p>
+<pre><code>
+//X軸、Y軸
+myctx2.beginPath();
+myctx2.moveTo(50,50);
+myctx2.lineTo(50,250);
+myctx2.lineTo(250,250);
+myctx2.lineWidth=1;
+myctx2.strokeStyle="black";
+myctx2.stroke();
+
+//矩形
+var jan=170;//←1月の売上を入力
+myctx2.fillStyle="blue";
+myctx2.fillRect(60,(250-jan),30,jan);
+</code></pre>
+
+<h2>Line graph</h2>
+<h3>折れ線グラフ/直線</h3>
+<p>myctx3.lineTo(x,y);</p>
+	<p><canvas id="mycanvas3" width="300" height="300"></canvas></p>
+<pre><code>
+//直線
+var ten=150;//10時の人数
+var four=70;//14時の人数
+var six=120;//16時の人数
+var twen=130;//20時の人数
+
+myctx3.beginPath();
+myctx3.moveTo(80,250-ten);
+myctx3.lineTo(130,250-four);
+myctx3.lineTo(180,250-six);
+myctx3.lineTo(230,250-twen);
+myctx3.lineWidth=3;
+myctx3.strokeStyle="blue";
+myctx3.stroke();
+
+</code></pre>
+
+
+<script>
+//円グラフ
+		var canvas=document.getElementById("mycanvas");
+		var myctx=mycanvas.getContext("2d");
+
+//商品A
+var itemA=150;//←商品Aの割合
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,270*Math.PI/180,(itemA-90)*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="green";
+myctx.fill();
+
+//商品B
+var itemB=100;
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,(itemA-90)*Math.PI/180,(itemA-90+itemB)*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="orange";
+myctx.fill();
+
+//商品C
+var itemC=50;
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,(itemA-90+itemB)*Math.PI/180,(itemA-90+itemB+itemC)*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="skyblue";
+myctx.fill();
+
+//商品D
+var itemD=30;
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,(itemA-90+itemB+itemC)*Math.PI/180,(itemA-90+itemB+itemC+itemD)*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="blue";
+myctx.fill();
+
+//その他
+myctx.beginPath();
+myctx.moveTo(150,150);
+myctx.arc(150,150,100,(itemA-90+itemB+itemC+itemD)*Math.PI/180,270*Math.PI/180,false);
+myctx.closePath();
+myctx.fillStyle="purple";
+myctx.fill();
+
+//文字
+myctx.fillStyle="black";
+myctx.font="30px bold";
+myctx.fillText("構成比",110,40);
+
+myctx.fillStyle="white";
+myctx.font="10px bold";
+myctx.fillText("商品A",190,150);
+
+myctx.fillStyle="white";
+myctx.font="10px bold";
+myctx.fillText("商品B",120,200);
+
+myctx.fillStyle="white";
+myctx.font="10px bold";
+myctx.fillText("商品C",70,150);
+
+myctx.fillStyle="white";
+myctx.font="10px bold";
+myctx.fillText("商品D",80,100);
+
+//棒グラフ
+		var canvas=document.getElementById("mycanvas2");
+		var myctx2=mycanvas2.getContext("2d");
+//X軸、Y軸
+myctx2.beginPath();
+myctx2.moveTo(50,50);
+myctx2.lineTo(50,250);
+myctx2.lineTo(250,250);
+myctx2.lineWidth=1;
+myctx2.strokeStyle="black";
+myctx2.stroke();
+
+//1月
+var jan=170;//←1月の売上を入力
+myctx2.fillStyle="blue";
+myctx2.fillRect(60,(250-jan),30,jan);
+
+//2月
+var feb=140;
+myctx2.fillStyle="blue";
+myctx2.fillRect(110,(250-feb),30,feb);
+
+//3月
+var mar=70;
+myctx2.fillStyle="red";
+myctx2.fillRect(160,(250-mar),30,mar);
+
+//4月
+var aprl=100;
+myctx2.fillStyle="blue";
+myctx2.fillRect(210,(250-aprl),30,aprl);
+
+//文字
+myctx2.fillStyle="black";
+myctx2.font="12px bold";
+myctx2.fillText("(万円）",15,40);
+
+myctx2.fillStyle="black";
+myctx2.font="30px bold";
+myctx2.fillText("月別売上",95,40);
+
+myctx2.fillStyle="black";
+myctx2.font="18px bold";
+myctx2.fillText("1月",60,270);
+
+myctx2.fillStyle="black";
+myctx2.font="18px bold";
+myctx2.fillText("2月",110,270);
+
+myctx2.fillStyle="black";
+myctx2.font="18px bold";
+myctx2.fillText("3月",160,270);
+
+myctx2.fillStyle="black";
+myctx2.font="18px bold";
+myctx2.fillText("4月",210,270);
+
+//折れ線グラフ
+		var canvas=document.getElementById("mycanvas3");
+		var myctx3=mycanvas3.getContext("2d");
+
+//X軸、Y軸
+myctx3.beginPath();
+myctx3.moveTo(50,50);
+myctx3.lineTo(50,250);
+myctx3.lineTo(250,250);
+myctx3.lineWidth=1;
+myctx3.strokeStyle="black";
+myctx3.stroke();
+
+//値
+var ten=150;//10時の人数
+var four=70;//14時の人数
+var six=120;//16時の人数
+var twen=130;//20時の人数
+
+myctx3.beginPath();
+myctx3.setLineDash([3, 2]);
+myctx3.moveTo(80,250-ten);
+myctx3.lineTo(130,250-four);
+myctx3.lineTo(180,250-six);
+myctx3.lineTo(230,250-twen);
+myctx3.lineWidth=3;
+myctx3.strokeStyle="blue";
+myctx3.stroke();
+
+
+//文字
+myctx3.fillStyle="black";
+myctx3.font="12px bold";
+myctx3.fillText("(人数）",15,40);
+
+myctx3.fillStyle="black";
+myctx3.font="20px bold";
+myctx3.fillText("利用者数",100,30);
+
+myctx3.fillStyle="black";
+myctx3.font="18px bold";
+myctx3.fillText("10時",60,270);
+
+myctx3.fillStyle="black";
+myctx3.font="18px bold";
+myctx3.fillText("14時",110,270);
+
+myctx3.fillStyle="black";
+myctx3.font="18px bold";
+myctx3.fillText("16時",160,270);
+
+myctx3.fillStyle="black";
+myctx3.font="18px bold";
+myctx3.fillText("20時",210,270);
+
+</script>
+		</main>
+		</body>
+		<footer>(c)Teraneko1201</footer>
+	</html>
