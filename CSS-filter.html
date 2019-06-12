@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html><html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>CSS-filter</title>
+<style>
+	.wrap{
+	    display:flex;
+	    margin-bottom:20px;}
+	.box{
+	    width:30%;
+	    margin-right:3%;}
+	.box img{
+	    width:80%;}
+	h1{
+	    font-size:20px;
+	    margin-bottom:20px;
+	    margin-block-end: 0;}
+	h2{
+	    font-size:20px;
+	    margin-bottom:10px;}
+
+/*明度*/
+	.brightness0{ filter: brightness(0%);}
+	.brightness100{ filter: brightness(100%);}
+	.brightness200{ filter: brightness(200%);}
+/*色相*/
+	.hue-rotate0{ filter: hue-rotate(0deg)}
+	.hue-rotate90{ filter: hue-rotate(90deg)}
+	.hue-rotate180{ filter: hue-rotate(180deg)}
+/*彩度*/
+	.saturate0{ filter: saturate(0%);}
+	.saturate100{ filter: saturate(100%);}
+	.saturate200{ filter: saturate(200%);}
+/*諧調*/
+	.invert0{ filter: invert(0%);}
+	.invert50{ filter: invert(50%);}
+	.invert100{ filter: invert(100%);}
+/*コントラスト*/
+	.contrast0{ filter: contrast(0%);}
+	.contrast100{ filter: contrast(100%);}
+	.contrast200{ filter: contrast(200%);}
+/*グレースケール*/
+	.grayscale0{ filter: grayscale(0%);}
+	.grayscale50{ filter: grayscale(50%);}
+	.grayscale100{ filter: grayscale(100%);}
+/*セピア*/
+	.sepia0{ filter: sepia(0%);}
+	.sepia50{filter: sepia(50%);} 
+	.sepia100{ filter: sepia(100%);}
+/*ぼかし*/
+	.blur0{filter: blur(0px);}
+	.blur5{  filter: blur(5px);}
+	.blur10{ filter: blur(10px);}
+/*透過*/
+	.opacity0{ filter: opacity(0%);}
+	.opacity50{ filter: opacity(50%);}
+	.opacity100{ filter: opacity(100%);}
+/*影*/
+	.drop-shadow-j{ filter: drop-shadow(5px 5px 10px #666);}
+	.drop-shadow-p{ filter: drop-shadow(5px 5px 10px #666);}
+	.box-shadow-p{ box-shadow:5px 5px 10px #666;}
+</style>
+</head>
+<body>
+<h1>明度brightness</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="brightness0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="brightness100" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>200%</h2>
+        <img class="brightness200" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>色相hue-rotate</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0deg</h2>
+        <img class="hue-rotate0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>90deg</h2>
+        <img class="hue-rotate90" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>180deg</h2>
+        <img class="hue-rotate180" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>彩度saturate</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="saturate0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="saturate100" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>200%</h2>
+        <img class="saturate200" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>階調nvert</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="invert0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>50%</h2>
+        <img class="invert50" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="invert100" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>コントラストcontrast</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="contrast0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="contrast100" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>200%</h2>
+        <img class="contrast200" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>グレースケールgrayscale</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="grayscale0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>50%</h2>
+        <img class="grayscale50" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="grayscale100" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>セピアsepia</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="sepia0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>50%</h2>
+        <img class="sepia50" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="sepia100" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>ぼかしblur</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0px</h2>
+        <img class="blur0" src="img/Flower.jpg" alt="img">
+    </div>
+        <div class="box">
+        <h2>5px</h2>
+        <img class="blur5" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>10px</h2>
+        <img class="blur10" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>透明度opacity</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>0%</h2>
+        <img class="opacity0" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>50%</h2>
+        <img class="opacity50" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>100%</h2>
+        <img class="opacity100" src="img/Flower.jpg" alt="img">
+    </div>
+</div>
+
+<h1>影drop-shadow</h1>
+<div class="wrap">
+    <div class="box">
+        <h2>drop-shadow：JPEG</h2>
+        <img class="drop-shadow-j" src="img/Flower.jpg" alt="img">
+    </div>
+    <div class="box">
+        <h2>drop-shadow：PNG</h2>
+        <img class="drop-shadow-p" src=img/"020.png" alt="img">
+    </div>
+    <div class="box">
+        <h2>box-shadow：PNG</h2>
+        <img class="box-shadow-p" src="img/020.png" alt="img">
+    </div>
+</div>
+</body>
+</html>
