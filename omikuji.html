@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>おみくじ</title>
+</head>
+<body>
+  <h1>今日の運勢</h1>
+  <input type="button" value="占う" onClick="random()">
+		<p id="omikuji"></p>
+		<img src="img/main.png" name="img1">
+
+  <script>
+		function random() 
+		{
+		var rand = Math.floor( Math.random() * 4) ; 
+		  if (rand == 0) msg = "大吉",img2="img/daikichi.png";
+			if (rand == 1) msg ="中吉",  img2="img/chuukichi.png";
+			if (rand == 2) msg = "小吉",img2="img/shoukichi.png";
+			if (rand == 3) msg = "吉",img2="img/kichi.png";
+
+		document.getElementById("omikuji").innerHTML=msg;
+		document.img1.src = img2;
+		}
+
+</script>
+</body>
+</html>
