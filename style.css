@@ -1,6 +1,6 @@
 ﻿body {
   /* 背景画像*/
-  background-image: url(bunkyou.JPG);
+  background-image: url(keyboad.jpg);
   background-position: center 30%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,11 +10,11 @@
   /* 背景画像入れ替え*/
 @media only screen and (max-width: 767px) {
   body {
-    background-image: url(keyboad.jpg);
+    background-image: url(bunkyou.JPG);
  	}
 }
 *{
-  color: #777;
+  color: #000;
 	text-align:center;
 }
 
@@ -23,21 +23,28 @@ h1 {
   line-height: 50px;
   font-weight: 400;
   margin-top: 100px;
-	text-shadow:3px 3px 3px #999;
+  text-shadow:2px 2px 2px springgreen;
+}
+h2{
+  font-size: 20px;
 }
 
 .sub-title,footer {
   margin: 30px auto;
   font-size: 20px;
   line-height: 23px;
-	color:#000;
+  color:#000;
+  font-weight:700;
+  text-shadow:3px 3px 3px yellowgreen;
 }
 
 .button {
   display: inline-block;
+  width:200px;
+  height:30px;
   padding: 6px 10px;
-  color: #444;
-  border: 1px solid #444;
+  color: #000;
+  border: 1px solid #000;
   border-radius: 3px;
   font-weight: 700;
   line-height: normal;
