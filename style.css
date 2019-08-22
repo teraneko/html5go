@@ -23,7 +23,7 @@ h1 {
   line-height: 50px;
   font-weight: 400;
   margin-top: 100px;
-  text-shadow:2px 2px 2px springgreen;
+  text-shadow:2px 2px 2px #C0C0C0;
 }
 h2{
   font-size: 20px;
@@ -35,13 +35,13 @@ h2{
   line-height: 23px;
   color:#000;
   font-weight:700;
-  text-shadow:3px 3px 3px yellowgreen;
+  text-shadow:3px 3px 3px #C0C0C0;
 }
 
 .button {
   display: inline-block;
   width:200px;
-  height:30px;
+  height:26px;
   padding: 6px 10px;
   color: #000;
   border: 1px solid #000;
@@ -51,10 +51,4 @@ h2{
   text-decoration: none;
   text-align: center;
   text-transform: none;
-}
-
-#kara{
-	height:500px;
-	border: 1px solid #cafaea;
-	visibility:hidden;
 }
