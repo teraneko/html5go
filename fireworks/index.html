@@ -1,0 +1,28 @@
+<!DOCTYPE html><html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>hanabi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="anime_hanabi"></div>
+  <div class="anime_hanabi"></div>
+  <div class="anime_hanabi"></div>
+  <div class="anime_hanabi"></div>
+  <div class="anime_hanabi"></div>
+  <div class="anime_hanabi"></div>
+  
+  <audio  autoplay loop id="audio">
+	<source src="fireworks1.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+	document.addEventListener('click', audioPlay);
+	function audioPlay() {
+	  document.getElementById('audio').play();
+	  document.removeEventListener('click', audioPlay);
+	}
+  </script>
+</body>
+</html>
