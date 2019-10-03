@@ -1,0 +1,24 @@
+/*オリンピックカウントダウン　CSS*/
+*{
+  text-align:center;
+  margin:10px 0;
+  color:#000000;
+  font-family: "arial";
+}
+#olympic{
+  font-size:3.0em;
+}
+#hinomaru{color:red;
+  font-size:1.4em;}
+
+.d{font-size:3.0em;
+  color:#0085C7;}
+
+.h{font-size:3.0em;
+  color:#F4C300;}
+
+.m{font-size:3.0em;
+  color:#009F3D;}
+
+.s{font-size:3.0em;
+  color:#DF0024;}
