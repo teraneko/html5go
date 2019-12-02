@@ -1,0 +1,84 @@
+<!--物理エンジン　https://brm.io/matter-js/-->
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>Sample</title>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script src="matter.js"></script>
+        <script>
+        
+        	var Engine = Matter.Engine,
+			    Render = Matter.Render,
+			    Runner = Matter.Runner,
+			    World = Matter.World,
+			    Bodies = Matter.Bodies;
+			 
+			// create engine
+			var engine = Engine.create(), 
+			    world = engine.world; 
+			 
+			// create renderer
+			var render = Render.create({ 
+			    element: document.body,
+			    engine: engine,
+			    options: {
+			      width: 800,  //ステージの横幅
+			      height: 350,  //ステージの高さ
+			      background: '#FFFFFF',  //ステージの背景色
+			      wireframes: false  //ワイヤーフレームモードをオフ
+			    }
+			});
+			 
+			Render.run(render);
+			 
+			// create runner
+			var runner = Runner.create();
+			Runner.run(runner, engine);
+			
+			//四角のオブジェクト作成(X,Y,横幅,高さ)
+			var shikaku = Bodies.rectangle(350, 0, 80, 80);
+			    shikaku2 = Bodies.rectangle(370, 100, 80, 80);
+			    shikaku3 = Bodies.rectangle(350, 200, 80, 80);
+			    
+			//円のオブジェクト作成(X,Y,半径)
+			var maru = Bodies.circle(200, 0, 50, {
+  				restitution: 1,
+			});
+			var maru2 = Bodies.circle(500, 0, 50, {
+  				 restitution: 2,
+			});	
+			var yuka = Bodies.rectangle(400, 350, 800, 30, {
+   				 isStatic: true
+			});
+
+			World.add(world, [ 
+			    shikaku,
+			    shikaku2,
+			    shikaku3,
+			    maru,
+			    maru2,
+			    yuka
+			]);
+			var MouseConstraint = Matter.MouseConstraint,
+			    Mouse = Matter.Mouse;
+			// add mouse control
+			var mouse = Mouse.create(render.canvas),
+			    mouseConstraint = MouseConstraint.create(engine, {
+			        mouse: mouse,
+			        constraint: {
+			            stiffness: 0.2,
+			            render: {
+			                visible: false
+			            }
+			        }
+			    });
+			World.add(world, mouseConstraint);
+
+			// keep the mouse in sync with rendering
+			render.mouse = mouse;
+
+        </script>
+    </body>
+</html>
