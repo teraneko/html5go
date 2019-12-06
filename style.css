@@ -1,6 +1,6 @@
 ﻿body {
   /* 背景画像*/
-  background-image: url(keyboad.jpg);
+  background-image: url(bunkyou.JPG);
   background-position: center 30%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,26 +10,25 @@
   /* 背景画像入れ替え*/
 @media only screen and (max-width: 767px) {
   body {
-    background-image: url(bunkyou.JPG);
+    background-image: url(Giraffe.JPG);
  	}
 }
 *{
+  margin: 0px;
   color: #000;
-	text-align:center;
+  text-align:center;
 }
 
-h1 {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: 400;
-  margin-top: 100px;
-  text-shadow:1px 1px 1px #C0C0C0;
+.header{
+  background: #fff;
+  display: flex;
+  padding: 30px 20px;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  filter: opacity(80%);
 }
-h2{
-  font-size: 14px;
-}
-
-.sub-title,footer {
+.sub-title {
   margin: 30px auto;
   font-size: 20px;
   line-height: 23px;
@@ -38,6 +37,15 @@ h2{
   text-shadow:1px 1px 1px #C0C0C0;
 }
 
+.content{
+    line-height: 1.6;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 800px;
+}
+.content p{
+    margin-bottom: 40px;
+}
 .button {
   display: inline-block;
   width:200px;
@@ -66,4 +74,12 @@ h2{
   text-decoration: none;
   text-align: center;
   text-transform: none;
+}
+.footer{
+  background: #333;
+  padding: 30px 0;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    filter: opacity(80%);
 }
