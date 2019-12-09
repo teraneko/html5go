@@ -45,6 +45,8 @@
 }
 .content p{
     margin-bottom: 40px;
+    text-shadow:1px 1px 1px #C0C0C0;
+
 }
 .button {
   display: inline-block;
@@ -54,11 +56,13 @@
   color: #000;
   border: 1px solid #000;
   border-radius: 3px;
+  box-shadow:1px 1px 1px #C0C0C0;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
   text-align: center;
   text-transform: none;
+  text-shadow:1px 1px 1px #C0C0C0;
 }
 
 .button-s {
@@ -74,6 +78,7 @@
   text-decoration: none;
   text-align: center;
   text-transform: none;
+  text-shadow:1px 1px 1px #C0C0C0;
 }
 .footer{
   background: #333;
