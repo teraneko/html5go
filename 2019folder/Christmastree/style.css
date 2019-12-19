@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+    background-color: #103C5D;
+}
+*.entrance {
+    color: #FFF;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+/*ツリー*/
+.tree {
+    margin: 80px auto 290px;
+    width: 430px;
+    position: relative;
+}
+.fan {
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #333;
+    border-radius: 0 0 100% 0;
+    color: #FFF;
+    background-color: #2B8571;
+    position: absolute;
+    transform: translate(-50%, 0) rotate(45deg);
+    box-sizing: border-box;
+}
+.fan.top {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    z-index: 300;
+}
+.fan.middle {
+    margin: -50px auto 0;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 50%;
+    z-index: 200;
+}
+.fan.bottom {
+    margin: -80px auto 0;
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 50%;
+    z-index: 100;
+}
+/*天辺の星*/
+.topStar {
+    width: 0;
+    height: 0;
+    border: 24px solid transparent;
+    border-top-color: #DCDCDC;
+    border-top-width: 39px;
+    border-bottom-width: 0;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 500;
+    animation: kirakira 3s linear infinite;
+}
+.topStar::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 24px solid transparent;
+    border-bottom-color: #DCDCDC;
+    border-bottom-width: 39px;
+    border-top-width: 0;
+    position: absolute;
+    top: -49px;
+    left: -24px;
+}
+/*オーナメントボール*/
+.ornamentBall {
+    width: 25px;
+    height: 25px;
+    border-bottom: 3px solid #666;
+    border-radius: 50%;
+    background-color: #D6CAA4;
+    position: absolute;
+    z-index: 500;
+}
+.ornamentBall:nth-child(1) {
+    top: 90px;
+    left: 140px;
+    animation: kirakira 2s linear infinite;
+}
+.ornamentBall:nth-child(2) {
+    top: 210px;
+    left: 290px;
+    animation: kirakira 2.5s linear infinite;
+}
+.ornamentBall:nth-child(3) {
+    top: 290px;
+    left: 180px;
+    animation: kirakira 3s linear infinite;
+}
+/*オーナメントドロップ*/
+.ornamentDrop {
+    width: 24px;
+    height: 24px;
+    border-bottom: 3px solid #666;
+    border-radius: 0 50% 50% 50%;
+    background-color: #A11800;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 500;
+}
+.ornamentDrop:nth-child(1) {
+    top: 150px;
+    left: 220px;
+}
+.ornamentDrop:nth-child(2) {
+    top: 230px;
+    left: 140px;
+}
+.ornamentDrop:nth-child(3) {
+    top: 280px;
+    left: 300px;
+}
+/*オーナメントスター*/
+.ornamentSter {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid #D1B95F;
+    display: block;
+    height: 0;
+    width: 0;
+    position: relative;
+    z-index: 400;
+}
+.ornamentSter:nth-child(1) {
+    top: 70px;
+    left: 250px;
+    animation: starrotate 5s linear infinite;
+}
+.ornamentSter:nth-child(2) {
+    top: 120px;
+    left: 170px;
+    animation: starrotate 5.5s linear infinite;
+}
+.ornamentSter:nth-child(3) {
+    top: 200px;
+    left: 240px;
+    animation: starrotate 6s linear infinite;
+}
+.ornamentSter:nth-child(4) {
+    top: 210px;
+    left: 100px;
+    animation: starrotate 6.5s linear infinite;
+}
+.ornamentSter:before, .ornamentSter:after {
+    content: "";
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid #D1B95F;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -20px;
+    position: absolute;
+    top: 0;
+}
+.ornamentSter:before {
+    transform: rotate(75deg);
+}
+.ornamentSter:after {
+    transform: rotate(-75deg);
+}
+/*ポット*/
+.pot {
+    margin: -20px auto 0;
+    padding: 50px 10px 0;
+    width: 220px;
+    height: 130px;
+    color: #FFF;
+    background: linear-gradient(to bottom, #AC2A36 0%, #AC2A36 70%, #333 100%);
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.pot::before {
+    content: "";
+    width: 240px;
+    height: 20px;
+    background-color: #AC2A36;
+    box-shadow: 0 7px 3px -3px rgb(81,18,26);
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+/*雪*/
+.flakeWrappre {
+    display: flex;
+    justify-content: space-between;
+}
+.flake {
+    border-radius: 50%;
+    display: block;
+    background-color: #FFF;
+    opacity: 1;
+    animation-duration: 6s;
+    transform-origin: 0 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.flake.small {
+    width: 10px;
+    height: 10px;
+    animation-name: dancingSmall;
+}
+.flake.large {
+    width: 15px;
+    height: 15px;
+    animation-name: dancingLarge;
+}
+/*アニメーション*/
+@keyframes starrotate {
+    from { transform: rotate(35deg);}
+    to { transform: rotate(395deg);}
+}
+@keyframes kirakira {
+    0% {
+    opacity: 1;
+    }
+    60% {
+    opacity: 1;
+    }
+    70% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+@keyframes dancingSmall {
+    0% {
+    transform: translate(0, 0);
+    opacity: 0;
+    }
+    20% {
+    transform: translate(0, 0);
+    opacity: 0;
+    }
+    40% {
+    transform: translate(10px, 100px);
+    opacity: 1;
+    }
+    60% {
+    transform: translate(0, 200px);
+    opacity: 1;
+    }
+    80% {
+    transform: translate(10px, 300px);
+    opacity: 0.5;
+    }
+    100% {
+    transform: translate(0, 400px);
+    opacity: 0;
+    }
+}
+@keyframes dancingLarge {
+    0% {
+    transform: translate(0, 0);
+    opacity: 1;
+    }
+    20% {
+    transform: translate(10px, 100px);
+    opacity: 1;
+    }
+    40% {
+    transform: translate(0, 200px);
+    opacity: 1;
+    }
+    60% {
+    transform: translate(20px, 300px);
+    opacity: 0.8;
+    }
+    80% {
+    transform: translate(0, 400px);
+    opacity: 0.3;
+    }
+    100% {
+    transform: translateY(500px);
+    opacity: 0;
+    }
+}
