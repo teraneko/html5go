@@ -1,0 +1,227 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Title */
+.title, .sub-title {
+  color: #002063;
+  font-weight: bold;
+}
+.title span:nth-child(1), .sub-title span:nth-child(1) {
+  margin-right: -2px;
+}
+.title span:nth-child(2), .sub-title span:nth-child(2) {
+  letter-spacing: 6px;
+}
+
+.title {
+  padding: 310px 0 0 20px;
+  font-size: 48px;
+}
+.title span:nth-child(1) {
+  letter-spacing: 9px;
+}
+
+.sub-title {
+  margin: 10px 0 0 15px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* TOKYO Olympic 2020 Emblem */
+#tokyoOlympic2020 {
+  position: relative;
+  width: 340px;
+  height: 480px;
+  margin: 30px auto;
+}
+#tokyoOlympic2020 #block01 {
+  position: absolute;
+  top: 126px;
+  left: 50px;
+}
+#tokyoOlympic2020 #block02 {
+  position: absolute;
+  top: 173px;
+  left: 190px;
+  transform: rotate(240deg);
+  transform-origin: right bottom;
+}
+#tokyoOlympic2020 #block03 {
+  position: absolute;
+  top: 56px;
+  left: 249px;
+  transform: rotate(120deg);
+  transform-origin: left top;
+}
+#tokyoOlympic2020 .bar1 {
+  position: relative;
+  width: 36px;
+  height: 11px;
+  background-color: #002063;
+  transform: rotate(60deg);
+  transform-origin: left top;
+  top: -1px;
+  left: -1px;
+  box-shadow: 62px 36px 0 #002063, 124px 0 0 #002063;
+}
+#tokyoOlympic2020 .bar1:before, #tokyoOlympic2020 .bar1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 36px;
+  height: 10px;
+  background-color: #002063;
+  transform-origin: left top;
+}
+#tokyoOlympic2020 .bar1:before {
+  left: 0;
+  top: 10px;
+  transform: rotate(30deg);
+}
+#tokyoOlympic2020 .bar1:after {
+  top: -8px;
+  left: -5px;
+  transform: rotate(-30deg);
+  box-shadow: 98px 99px 0 #002063;
+}
+#tokyoOlympic2020 .bar2 {
+  position: relative;
+}
+#tokyoOlympic2020 .bar2:before, #tokyoOlympic2020 .bar2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #002063;
+  transform-origin: left top;
+}
+#tokyoOlympic2020 .bar2:before {
+  top: 24px;
+  left: 7px;
+  width: 33px;
+  height: 20px;
+          transform: rotate(75deg);
+  box-shadow: 51px -52px 0 #002063;
+}
+#tokyoOlympic2020 .bar2:after {
+  top: 5px;
+  left: 30px;
+  width: 33px;
+  height: 20px;
+  transform: rotate(45deg);
+  box-shadow: 51px 52px 0 #002063, 120px 33px 0 #002063;
+}
+#tokyoOlympic2020 .bar3 {
+  position: relative;
+  top: 41px;
+  left: 39px;
+  width: 28px;
+  height: 28px;
+  background-color: #002063;
+  transform: rotate(60deg);
+  transform-origin: left top;
+  box-shadow: 62px -37px 0 #002063;
+}
+#tokyoOlympic2020 .bar4 {
+  position: relative;
+}
+#tokyoOlympic2020 .bar4:before, #tokyoOlympic2020 .bar4:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #002063;
+  transform-origin: left top;
+}
+#tokyoOlympic2020 .bar4:before {
+  top: 64px;
+  left: 151px;
+  width: 32px;
+  height: 20px;
+  transform: rotate(135deg);
+}
+#tokyoOlympic2020 .bar4:after {
+  top: 99px;
+  left: 150px;
+  width: 26px;
+  height: 26px;
+          transform: rotate(119deg);
+}
+
+/* Olympic Ring */
+#rings {
+  position: relative;
+  margin: 20px auto;
+  width: 205px;
+}
+#rings div, #rings div:before {
+  position: absolute;
+  width: 3.2em;
+  height: 3.2em;
+  border-width: 0.4em;
+  border-style: solid;
+  border-radius: 3.2em;
+}
+#rings div:nth-child(1) {
+  top: 0em;
+  left: 0em;
+  z-index: 5;
+  border-color: #0079C3;
+}
+#rings div:nth-child(2) {
+  top: 1.6em;
+  left: 2.2em;
+  z-index: 10;
+  border-color: #F5B629;
+}
+#rings div:nth-child(2):before {
+  content: ' ';
+  top: -2em;
+  left: -2.6em;
+  z-index: 16;
+  border-color: transparent #0079C3 transparent transparent;
+}
+#rings div:nth-child(3) {
+  top: 0em;
+  left: 4.4em;
+  z-index: 15;
+  border-color: #000;
+}
+#rings div:nth-child(3):before {
+  content: ' ';
+  top: 1.2em;
+  left: -2.6em;
+  z-index: 21;
+  border-color: #F5B629 transparent transparent transparent;
+  transform: rotate(40deg);
+}
+#rings div:nth-child(4) {
+  top: 1.6em;
+  left: 6.6em;
+  z-index: 20;
+  border-color: #009945;
+}
+#rings div:nth-child(4):before {
+  content: ' ';
+  top: -2em;
+  left: -2.6em;
+  z-index: 26;
+  border-color: transparent #000 transparent transparent;
+}
+#rings div:nth-child(5) {
+  top: 0em;
+  left: 8.8em;
+  z-index: 25;
+  border-color: #E71F4A;
+}
+#rings div:nth-child(5):before {
+  content: ' ';
+  top: 1.2em;
+  left: -2.6em;
+  z-index: 31;
+  border-color: #009945 transparent transparent transparent;
+  transform: rotate(40deg);
+}
+
